@@ -14,22 +14,19 @@ Media Uploads: Users can upload images with their posts, and a default image is 
 Pagination: Posts are fetched and displayed in pages, ensuring smooth scrolling and loading, even with large datasets.
 Logout: Users can easily log out of the application after their session, maintaining secure interactions.
 
-**Technologies Used
-**
+**Technologies Used**
 HTML
 SCSS
 JavaScript
 Noroff Social API for backend interaction
 LocalStorage for token management
 
-**Navigate to the project directory:
-**
+**Navigate to the project directory:**
 bash
 Copy code
 cd petal-parlour
 
-**Start the project:
-**
+**Start the project:**
 You can either:
 Open the index.html file directly in a browser
 Or use a tool like Live Server in VS Code or npm serve:
@@ -37,8 +34,7 @@ bash
 Copy code
 npm run start
 
-**API Usage
-**
+**API Usage**
 This project interacts with the Noroff Social API, and most actions like fetching, creating, updating, and deleting posts are performed via API calls.
 Example API Calls
 Register: /auth/register
@@ -48,8 +44,7 @@ Create Post: /social/posts
 Edit Post: /social/posts/{id}
 Delete Post: /social/posts/{id}
 
-**How to Use the Application
-**
+**How to Use the Application**
 1. Register
 Navigate to the newuser.html page and fill in your details (Name, Noroff Email, and Password).
 After successful registration, you’ll be redirected to the login page.
