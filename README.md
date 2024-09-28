@@ -3,8 +3,7 @@
 Petal Parlour is a social media platform that fosters a vibrant community of flower and nature enthusiasts. Users can share their experiences through images, text, and location tags, making it a digital garden for people to explore and interact with. It is a simple web application that allows users to create, update, delete, and fetch posts tagged as part of a virtual "Petal Parlour". Users can register, log in, and manage their posts, including uploading media and tagging their location. The app features character counting, pagination, and smooth user experiences like form resetting, seamless editing, and real-time UI updates.
 This project interacts with the Noroff Social API.
 
-![logo]([http://url/to/img.png](https://res.cloudinary.com/dbjbheduy/image/upload/v1727539912/logo_womecd.png))
-
+![logo](logo.png)
 
 **Features**
 User Registration and Login: Allows users to sign up with a valid Noroff student email, securely log in, and manage posts.
@@ -22,17 +21,6 @@ SCSS
 JavaScript
 Noroff Social API for backend interaction
 LocalStorage for token management
-
-**Installation
-**
-Prerequisites
-A modern web browser like Chrome, Firefox, or Edge.
-**Steps**
-Clone the repository:
-bash
-Copy code
-git clone https://github.com/your-repo/petal-parlour.git
-
 
 **Navigate to the project directory:
 **
