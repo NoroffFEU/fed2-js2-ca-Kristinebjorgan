@@ -1,19 +1,33 @@
-// Use Postman, or JavaScript to get your API key
-// In Workflow we will learn how to secure this information
-export const API_KEY = "replace-with-your-key";
-
-export const API_BASE = "https://v2.api.noroff.dev";
-
-export const API_AUTH = `${API_BASE}/auth`;
-
-export const API_AUTH_LOGIN = `${API_AUTH}/login`;
-
-export const API_AUTH_REGISTER = `${API_AUTH}/register`;
-
-export const API_AUTH_KEY = `${API_AUTH}/create-api-key`;
-
-export const API_SOCIAL = `${API_BASE}/social`;
-
-export const API_SOCIAL_POSTS = `${API_SOCIAL}/posts`;
-
-export const API_SOCIAL_PROFILES = `${API_SOCIAL}/profiles`;
+/**
+ * API requests
+ * Sends an API request to the URL with the method and body.
+ *
+ * This function Fetches the API and handles JSON raw material to body,
+ * Error: throws an error if the response is not successful.
+ *
+ * @async
+ * @function sendApiRequest
+ * @param {string} url - The URL of the API endpoint to send the request to.
+ * @param {string} method - The HTTP method to use for the request.
+ * @param {Object} [body={}] - The request body to send as JSON.
+ * @returns {Promise<Object>} - A Promise that resolves to the JSON response from the API.
+ * @throws {Error} - Throws an error if the response is not ok.
+ *
+ * @example
+ * // Example usage: Sending a POST request with data
+ * sendApiRequest('https://api.example.com/data', 'POST', { name: 'John' })
+ *   .then(response => console.log(response))
+ *   .catch(error => console.error('Error:', error.message));
+ */
+export async function sendApiRequest(url, method, body = {}) {
+  const response = await fetch(url, {
+    method,
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  if (!response.ok) {
+    const errorData = await response.json();
+    throw new Error(errorData.message || "Something went wrong");
+  }
+  return response.json();
+}
